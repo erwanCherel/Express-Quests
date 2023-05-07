@@ -78,7 +78,7 @@ const updateMovie = (req, res) => {
   const id = parseInt(req.params.id);
   database
     .query(
-      "UPDATE movies set title = ?, director = ?, year = ?, color = ?, duration = ? WHERE id=?",
+      "UPDATE movies SET title = ?, director = ?, year = ?, color = ?, duration = ? WHERE id=?",
       [title, director, year, color, duration, id]
     )
     .then(([result]) => {
